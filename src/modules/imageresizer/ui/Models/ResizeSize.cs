@@ -112,7 +112,7 @@ namespace ImageResizer.Models
 
         private void UpdateShowHeight()
         {
-            ShowHeight = Unit != ResizeUnit.Percent;
+            ShowHeight = Fit == ResizeFit.Stretch || Unit != ResizeUnit.Percent;
         }
 
         private double ConvertToPixels(double value, ResizeUnit unit, int originalValue, double dpi)
